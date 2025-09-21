@@ -3,43 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gala Eventos - Entradas</title>
+    <title>Dembow Fest - Identificación</title>
     <style>
         body { 
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
-            background-color: #121212; 
+            background-color: #000; /* Fondo negro como en la imagen */
             color: #e0e0e0; 
-            text-align: center; 
-            padding: 20px;
+            display: flex; /* Para centrar contenido verticalmente */
+            flex-direction: column; /* Para que los elementos se apilen */
+            justify-content: center; /* Centra el contenido verticalmente */
+            align-items: center; /* Centra el contenido horizontalmente */
+            min-height: 100vh; /* Ocupa el 100% del alto de la ventana */
             margin: 0;
+            padding: 20px;
+            box-sizing: border-box; /* Para incluir padding en el cálculo del ancho/alto */
         }
-        .container { 
-            max-width: 700px; 
-            margin: auto; 
+        .logo-container {
+            margin-bottom: 40px; /* Espacio debajo del logo */
         }
-        h1 { 
-            color: #BB86FC; 
-            font-size: 2.5em;
-            margin-bottom: 10px;
+        .logo {
+            max-width: 200px; /* Tamaño del logo como en la imagen */
+            height: auto;
         }
-        p { 
-            font-size: 1.1em;
-            line-height: 1.6;
-        }
-        .form-container {
-            margin-top: 30px;
+        .form-wrapper {
+            background-color: #000; /* Sin fondo de caja para el formulario */
+            padding: 20px;
             border-radius: 8px;
-            overflow: hidden; /* Esto es para que el formulario no se salga del borde redondeado */
+            box-shadow: none; /* Sin sombra */
+            width: 100%;
+            max-width: 400px; /* Ancho máximo del formulario */
+            text-align: left;
+        }
+        h2 {
+            color: #e0e0e0; /* Color de texto para los encabezados */
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+        /* Estilos para que el formulario incrustado se adapte al diseño */
+        iframe {
+            width: 100%;
+            height: 350px; /* Altura ajustada para el formulario */
+            border: 1px solid #333; /* Borde sutil */
+            border-radius: 5px;
+            background-color: #1a1a1a; /* Fondo oscuro para el iframe */
+        }
+        /* Pequeño ajuste para que el texto de Google Forms sea más oscuro si es necesario */
+        .freebirdFormviewerViewFormCard {
+             background-color: #1a1a1a !important; /* Intenta oscurecer el fondo de Google Forms */
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>REGISTRO GALA FEST</h1>
-        <p>Estás a un paso de la mejor fiesta. Completa tus datos a continuación para iniciar el proceso y asegurar tu entrada.</p>
+    <div class="logo-container">
+        <img src="https://imgur.com/a/8pRiRBN" alt="Logo Gala" class="logo">
+    </div>
 
-        <div class="form-container">
-            <h2>Cargando formulario de registro...</h2>
+    <div class="form-wrapper">
+        <h2>Elige tu identificación</h2>
+        <div id="google-form-placeholder">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf_vsEQ5dgBM9r9XdF4pne2LbiMN9SHsZPy5iR4jQJckR_hPw/viewform?usp=dialog" width="100%" height="350" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
         </div>
 
     </div>
