@@ -3,67 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dembow Fest - Identificación</title>
+    <title>Gala Eventos - Identificación</title>
+    
+    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
+
     <style>
         body { 
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
-            background-color: #000; /* Fondo negro como en la imagen */
-            color: #e0e0e0; 
-            display: flex; /* Para centrar contenido verticalmente */
-            flex-direction: column; /* Para que los elementos se apilen */
-            justify-content: center; /* Centra el contenido verticalmente */
-            align-items: center; /* Centra el contenido horizontalmente */
-            min-height: 100vh; /* Ocupa el 100% del alto de la ventana */
+            background-color: #000000;
+            color: #ffffff; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
             margin: 0;
             padding: 20px;
-            box-sizing: border-box; /* Para incluir padding en el cálculo del ancho/alto */
+            box-sizing: border-box;
         }
         .logo-container {
-            margin-bottom: 40px; /* Espacio debajo del logo */
+            margin-bottom: 40px;
         }
         .logo {
-            max-width: 200px; /* Tamaño del logo como en la imagen */
+            max-width: 200px;
             height: auto;
         }
         .form-wrapper {
-            background-color: #000; /* Sin fondo de caja para el formulario */
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: none; /* Sin sombra */
             width: 100%;
-            max-width: 400px; /* Ancho máximo del formulario */
+            max-width: 400px;
             text-align: left;
         }
-        h2 {
-            color: #e0e0e0; /* Color de texto para los encabezados */
-            font-size: 1.2em;
-            margin-bottom: 15px;
+        .form-group {
+            margin-bottom: 20px;
         }
-        /* Estilos para que el formulario incrustado se adapte al diseño */
-        iframe {
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1em;
+            color: #e0e0e0;
+        }
+        input, select {
             width: 100%;
-            height: 350px; /* Altura ajustada para el formulario */
-            border: 1px solid #333; /* Borde sutil */
+            padding: 12px;
+            background-color: #ffffff;
+            border: 1px solid #333;
             border-radius: 5px;
-            background-color: #1a1a1a; /* Fondo oscuro para el iframe */
+            font-size: 1em;
+            box-sizing: border-box;
+            color: #000;
         }
-        /* Pequeño ajuste para que el texto de Google Forms sea más oscuro si es necesario */
-        .freebirdFormviewerViewFormCard {
-             background-color: #1a1a1a !important; /* Intenta oscurecer el fondo de Google Forms */
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #000000;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.2s, color 0.2s;
+        }
+        button:hover {
+            background-color: #ffffff;
+            color: #000000;
         }
     </style>
 </head>
 <body>
+
     <div class="logo-container">
-        <img src="https://imgur.com/a/8pRiRBN" alt="Logo Gala" class="logo">
+        <img src="logo.png" alt="Logo Gala" class="logo"> 
     </div>
 
     <div class="form-wrapper">
-        <h2>Elige tu identificación</h2>
-        <div id="google-form-placeholder">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf_vsEQ5dgBM9r9XdF4pne2LbiMN9SHsZPy5iR4jQJckR_hPw/viewform?usp=dialog" width="100%" height="350" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-        </div>
+        <form action="https://send.pageclip.co/2s1JJNxFoUvCeV7NftkPgou4NxLBhSYH" class="pageclip-form" method="post">
+            
+            <div class="form-group">
+                <label for="id-number">Número de DNI</label>
+                <input type="text" name="dni" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" name="email" required>
+            </div>
 
+            <div class="form-group">
+                <label for="telefono">Número de Teléfono</label>
+                <input type="tel" name="telefono" required>
+            </div>
+
+            <button type="submit" class="pageclip-form__submit">
+                <span>Registrarme</span>
+            </button>
+        </form>
     </div>
+    
+    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+
 </body>
 </html>
